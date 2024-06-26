@@ -72,9 +72,15 @@ header img {
     
     background-color: var(--mainColor);
 }
-#layer span{
-    /* background-color: var(--fiveColor); */
+#layer  span{
     font-size: 12px;
+    font-weight: bold;
+}
+#layer .des{
+  font-size: 14px;
+}
+#layer h4{
+  font-size: 28px;
 }
 .loading{
   background-color: rgba(76, 75, 75, 0.447);
@@ -134,4 +140,27 @@ header img {
   }
 }
     
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+  
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #32383E
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--mainColor);
+  height: 200px;
+  box-shadow: 0 0 5px rgb(0 0 0 / 0.5) inset;
+  border-radius: 50px;
+  
+}
+
+
+
 
