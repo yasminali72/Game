@@ -1,7 +1,7 @@
 "use strict";
 
 //game
-export function displayData(element) {
+ function displayData(element) {
   $("#cards")
     .append(`<div class=" col-md-6 col-lg-4 col-xl-3" id='${element.id}'>
       
@@ -21,6 +21,16 @@ export function displayData(element) {
          </div>
       </div>`);
 }
+export function displayAllData(response) {
+  $("#cards").empty(); // Clear previous content
+  response.forEach((element) => {
+    displayData(element);
+    removeLoading();
+
+    // console.log(element);
+  });
+}
+
 
 //details of game
 export function displayDetails(responseDetails) {
@@ -40,6 +50,9 @@ export function displayDetails(responseDetails) {
   });
 }
 
+
+
+
 //loading
 export function removeLoading() {
   // document.querySelector(".loading").classList.replace("d-flex", "d-none");
@@ -50,3 +63,4 @@ export function addLoading() {
   // document.querySelector(".loading").classList.replace("d-none", "d-flex");
   $(".loading").removeClass("d-none").addClass("d-flex");
 }
+

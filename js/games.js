@@ -1,7 +1,6 @@
 "use strict";
 
-import { removeLoading } from "./ui.js";
-import { displayData } from "./ui.js";
+import { displayAllData } from "./ui.js";
 
 export async function getData(category = "mmorpg") {
   //mmorpg is defualt
@@ -26,12 +25,4 @@ export async function getData(category = "mmorpg") {
   }
 }
 
-function displayAllData(response) {
-  $("#cards").empty(); // Clear previous content
-  response.forEach((element) => {
-    displayData(element);
-    removeLoading();
 
-    // console.log(element);
-  });
-}
