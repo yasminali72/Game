@@ -1,0 +1,137 @@
+:root {
+  --mainFont: "Nerko One", cursive;
+  --mainColor: #272b30;
+  --secColor: #3a497b;
+  --thridColor: #4a6792;
+  --fourColor:#0D6EFD;
+  --fiveColor:#0DCAF0;
+  --colorText: #fff;
+  --secColTxt: #09c;
+}
+body {
+  font-family: var(--mainFont);
+  background-color: var(--mainColor);
+  color: var(--colorText);
+}
+
+header img {
+  max-height: 30vh;
+}
+
+.navbar {
+  background-color: var(--secColor);
+  box-shadow: 0 0 10px rgb(0 0 0 / 0.7);
+  margin-top: -30px;
+}
+.navbar-brand img {
+  max-width: 40px;
+}
+.navbar-nav a {
+  color: var(--colorText);
+  font-size: 12.5px;
+}
+.navbar-nav .nav-link.active,
+.navbar-nav .nav-link.show {
+  --bs-navbar-active-color: var(--secColTxt);
+}
+.navbar-nav a:hover {
+  color: var(--secColTxt);
+}
+.navbar-nav a:focus {
+    color: var(--secColTxt);
+  }
+
+.card {
+  background-color: var(--mainColor);
+  color: var(--colorText);
+  border-color:rgba(0,0,0,0,0.175);
+  font-size: 14px;
+  transition: all 1s;
+}
+.card img {
+  filter: grayscale(70%)
+}
+
+.card:hover {
+  transform: scale(1.05);
+  img {
+    filter: grayscale(0%);
+  }
+  .hint {
+    background-color: var(--fourColor);
+  }
+}
+.card .hint {
+  background-color: var(--thridColor);
+}
+.card span{
+    background-color: #32383E;
+}
+
+#layer{
+    
+    background-color: var(--mainColor);
+}
+#layer span{
+    /* background-color: var(--fiveColor); */
+    font-size: 12px;
+}
+.loading{
+  background-color: rgba(76, 75, 75, 0.447);
+  z-index: 999;
+}
+.loader {
+  width:100px;
+  height:100px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  border: 3px solid;
+  border-color: #FFF #FFF transparent transparent;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.loader::after,
+.loader::before {
+  content: '';  
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  border: 3px solid;
+  border-color: transparent transparent #FF3D00 #FF3D00;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  animation: rotationBack 0.5s linear infinite;
+  transform-origin: center center;
+}
+.loader::before {
+  width: 60px;
+  height: 60px;
+  border-color: #FFF #FFF transparent transparent;
+  animation: rotation 1.5s linear infinite;
+}
+    
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
+@keyframes rotationBack {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
+}
+    
+
