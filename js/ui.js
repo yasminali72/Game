@@ -49,12 +49,12 @@ export class UI {
   }
 
   static removeLoading() {
-    $(".loading").removeClass("d-flex");
-    $(".loading").hide();
+    $(".loading").removeClass("d-flex").addClass('d-none');
+    
   }
 
   static addLoading() {
-    $(".loading").addClass("d-flex");
-    $(".loading").show();
+    $(".loading").removeClass('d-none').addClass('d-flex')
+    
   }
 }
