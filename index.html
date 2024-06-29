@@ -11,7 +11,8 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body >
+  <body>
+    
     <header>
       <img
         src="images/wraper.png"
@@ -21,7 +22,7 @@
     </header>
 
     <main>
-      <section>
+      <section id="home">
         <div class="games">
           <nav
             class="navbar navbar-expand-lg col-md-6 col-lg-9 ms-auto me-auto rounded-4 position-sticky top-0 z-3"
@@ -80,13 +81,14 @@
         </div>
       </section>
 
-      <div class="vh-100 position-absolute top-0 w-100 z-3 d-none" id="layer">
-        <div class="container pt-4">
-          <div class="d-flex justify-content-between align-items-center">
+      <section id="layer" style="display: none;">
+      <div class="layer position-absolute top-0 start-0 end-0  ">
+        <div class="container pt-4 ">
+          <div class=" d-flex justify-content-between align-items-center ">
             <h4>Details Game</h4>
             <i class="fa-solid fa-xmark fs-3 text-secondary" role="button"></i>
           </div>
-          <div class="row layer gy-4 mt-1">
+          <div class="row  gy-4 mt-1 d-none ">
             <div class="col-md-4">
               <img src="" alt="" class="w-100" />
             </div>
@@ -121,12 +123,14 @@
           </div>
         </div>
       </div>
-
-      <div
-        class="loading m-auto position-fixed w-100 vh-100 top-0 start-0 d-flex justify-content-center align-items-center"
-      >
-        <span class="loader"></span>
-      </div>
+    </section>
+      
+        <div
+          class="loading position-fixed top-0 start-0 end-0 bottom-0 justify-content-center align-items-center" style="display: none;"
+        >
+          <span class="loader"></span>
+        </div>
+     
     </main>
 
     <script src="js/bootstrap.bundle.js"></script>
@@ -134,3 +138,4 @@
     <script type="module" src="js/main.js"></script>
   </body>
 </html>
+

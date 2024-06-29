@@ -72,14 +72,14 @@ header img {
     
     background-color: var(--mainColor);
 }
-#layer  span{
+.layer  span{
     font-size: 12px;
     font-weight: bold;
 }
-#layer .des{
+.layer .des{
   font-size: 14px;
 }
-#layer h4{
+.layer h4{
   font-size: 28px;
 }
 .loading{
