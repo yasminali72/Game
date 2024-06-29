@@ -12,16 +12,14 @@ $(".nav-link").click(function (e) {
   UI.addLoading();
   Games.getData(category);
 });
-UI.addLoading()
+UI.addLoading();
 Games.getData();
 
 $(document).on("click", ".card", function (e) {
   let cardId = $(e.currentTarget).closest(".col-md-6").attr("id");
   $("#home").hide();
-  $('header').hide();
-  $('#layer').show();
+  $("header").hide();
+  $("#layer").show();
   UI.addLoading();
   Details.getDetails(cardId);
 });
-
-

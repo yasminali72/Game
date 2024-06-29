@@ -1,6 +1,5 @@
 "use strict";
 
-
 export class UI {
   static displayData(element) {
     $("#cards").append(`
@@ -24,17 +23,17 @@ export class UI {
   }
 
   static displayAllData(response) {
-    $('#layer').hide();
+    $("#layer").hide();
     $("#cards").empty(); // Clear previous content
     response.forEach((element) => {
       UI.displayData(element);
-      UI.removeLoading()
+      UI.removeLoading();
     });
   }
 
   static displayDetails(responseDetails) {
-    UI.removeLoading()
-    $('.layer .row').removeClass('d-none');
+    UI.removeLoading();
+    $(".layer .row").removeClass("d-none");
     $(".layer img").attr("src", responseDetails.thumbnail);
     $("h3").html(`title: ${responseDetails.title}`);
     $(".Category").html(responseDetails.genre);
@@ -45,21 +44,17 @@ export class UI {
     $(".layer i").click(function () {
       $("#layer").hide();
       $("#home").show();
-      $('header').show();
+      $("header").show();
     });
   }
 
   static removeLoading() {
-    $('.loading').removeClass('d-flex')
+    $(".loading").removeClass("d-flex");
     $(".loading").hide();
   }
 
   static addLoading() {
-    $('.loading').addClass('d-flex')
+    $(".loading").addClass("d-flex");
     $(".loading").show();
-    
   }
- 
-
 }
-

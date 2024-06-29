@@ -1,10 +1,9 @@
 "use strict";
 
-
 import { UI } from "./ui.js";
 
-export class Details{
- static  async  getDetails(cardId) {
+export class Details {
+  static async getDetails(cardId) {
     const options = {
       method: "GET",
       headers: {
@@ -12,7 +11,7 @@ export class Details{
         "x-rapidapi-host": "free-to-play-games-database.p.rapidapi.com",
       },
     };
-  
+
     try {
       let apiDetails = await fetch(
         `https://free-to-play-games-database.p.rapidapi.com/api/game?id=${cardId}`,
@@ -21,17 +20,16 @@ export class Details{
       let responseDetails = await apiDetails.json();
       console.log(apiDetails);
       console.log(responseDetails);
-  
+
       UI.displayDetails(responseDetails);
     } catch (error) {
-      UI.removeLoading()
+      UI.removeLoading();
       $(".layer i").click(function () {
         $("#layer").hide();
         $("#home").show();
-        $('header').show()
-      })
+        $("header").show();
+      });
       console.log(error);
-  }
+    }
   }
 }
-

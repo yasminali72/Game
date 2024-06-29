@@ -3,8 +3,8 @@
   --mainColor: #272b30;
   --secColor: #3a497b;
   --thridColor: #4a6792;
-  --fourColor:#0D6EFD;
-  --fiveColor:#0DCAF0;
+  --fourColor: #0d6efd;
+  --fiveColor: #0dcaf0;
   --colorText: #fff;
   --secColTxt: #09c;
 }
@@ -38,18 +38,18 @@ header img {
   color: var(--secColTxt);
 }
 .navbar-nav a:focus {
-    color: var(--secColTxt);
-  }
+  color: var(--secColTxt);
+}
 
 .card {
   background-color: var(--mainColor);
   color: var(--colorText);
-  border-color:rgba(0,0,0,0,0.175);
+  border-color: rgba(0, 0, 0, 0, 0.175);
   font-size: 14px;
   transition: all 1s;
 }
 .card img {
-  filter: grayscale(70%)
+  filter: grayscale(70%);
 }
 
 .card:hover {
@@ -64,42 +64,41 @@ header img {
 .card .hint {
   background-color: var(--thridColor);
 }
-.card span{
-    background-color: #32383E;
+.card span {
+  background-color: #32383e;
 }
 
-#layer{
-    
-    background-color: var(--mainColor);
+#layer {
+  background-color: var(--mainColor);
 }
-.layer  span{
-    font-size: 12px;
-    font-weight: bold;
+.layer span {
+  font-size: 12px;
+  font-weight: bold;
 }
-.layer .des{
+.layer .des {
   font-size: 14px;
 }
-.layer h4{
+.layer h4 {
   font-size: 28px;
 }
-.loading{
+.loading {
   background-color: rgba(76, 75, 75, 0.447);
   z-index: 999;
 }
 .loader {
-  width:100px;
-  height:100px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   display: inline-block;
   position: relative;
   border: 3px solid;
-  border-color: #FFF #FFF transparent transparent;
+  border-color: #fff #fff transparent transparent;
   box-sizing: border-box;
   animation: rotation 1s linear infinite;
 }
 .loader::after,
 .loader::before {
-  content: '';  
+  content: "";
   box-sizing: border-box;
   position: absolute;
   left: 0;
@@ -108,7 +107,7 @@ header img {
   bottom: 0;
   margin: auto;
   border: 3px solid;
-  border-color: transparent transparent #FF3D00 #FF3D00;
+  border-color: transparent transparent #ff3d00 #ff3d00;
   width: 80px;
   height: 80px;
   border-radius: 50%;
@@ -119,10 +118,10 @@ header img {
 .loader::before {
   width: 60px;
   height: 60px;
-  border-color: #FFF #FFF transparent transparent;
+  border-color: #fff #fff transparent transparent;
   animation: rotation 1.5s linear infinite;
 }
-    
+
 @keyframes rotation {
   0% {
     transform: rotate(0deg);
@@ -130,7 +129,7 @@ header img {
   100% {
     transform: rotate(360deg);
   }
-} 
+}
 @keyframes rotationBack {
   0% {
     transform: rotate(0deg);
@@ -139,17 +138,15 @@ header img {
     transform: rotate(-360deg);
   }
 }
-    
 
 /* width */
 ::-webkit-scrollbar {
   width: 10px;
-  
 }
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: #32383E
+  background: #32383e;
 }
 
 /* Handle */
@@ -158,9 +155,4 @@ header img {
   height: 200px;
   box-shadow: 0 0 5px rgb(0 0 0 / 0.5) inset;
   border-radius: 50px;
-  
 }
-
-
-
-

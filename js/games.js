@@ -1,12 +1,10 @@
 "use strict";
 
-import {UI} from './ui.js'
+import { UI } from "./ui.js";
 
-
-
-export class Games{
-
- static async getData(category = "mmorpg") {//mmorpg is defualt
+export class Games {
+  static async getData(category = "mmorpg") {
+    //mmorpg is defualt
     const options = {
       method: "GET",
       headers: {
@@ -25,10 +23,6 @@ export class Games{
       UI.displayAllData(response);
     } catch (error) {
       console.error(error);
-   
     }
   }
 }
-
-
-
