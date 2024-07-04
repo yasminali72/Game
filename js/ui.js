@@ -50,11 +50,12 @@ export class UI {
 
   static removeLoading() {
     $(".loading").removeClass("d-flex").addClass('d-none');
+    $('body').css('overflow','auto')
     
   }
 
   static addLoading() {
     $(".loading").removeClass('d-none').addClass('d-flex')
-    
+    $('body').css('overflow','hidden')
   }
 }
